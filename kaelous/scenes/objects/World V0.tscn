@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://2ffqmgo73eus"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+radius = 100.0
+radial_segments = 20
+rings = 20
