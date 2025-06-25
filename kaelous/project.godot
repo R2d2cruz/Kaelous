@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Kaelous"
-run/main_scene="uid://2ffqmgo73eus"
+run/main_scene="uid://dsd87urw5h44b"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

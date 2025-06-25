@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ui4wx1gmidt5"]
+
+[ext_resource type="Texture2D" uid="uid://cq7b55k5ci510" path="res://Assets/Models/Kaelous ship V1_0.png" id="1_7ilca"]
+
+[resource]
+resource_name = "Material.1"
+albedo_texture = ExtResource("1_7ilca")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.3
+emission = Color(0, 0, 1, 1)

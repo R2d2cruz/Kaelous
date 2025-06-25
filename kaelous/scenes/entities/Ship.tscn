@@ -1,12 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://b63w51nmovycn"]
+[gd_scene load_steps=5 format=3 uid="uid://b63w51nmovycn"]
 
-[ext_resource type="PackedScene" uid="uid://c0eujowsdi2an" path="res://Assets/Models/Kaelous ship V1.gltf" id="1_4cm4r"]
+[ext_resource type="ArrayMesh" uid="uid://g7k0ot10wn3h" path="res://Assets/Models/Kaelous ship V1_mesh2.res" id="1_ijv0b"]
+[ext_resource type="ArrayMesh" uid="uid://6elr2r4railn" path="res://Assets/Models/Kaelous ship V1_mesh3.res" id="2_jjarf"]
+[ext_resource type="ArrayMesh" uid="uid://6ps577tchwl5" path="res://Assets/Models/Kaelous ship V1_mesh4.res" id="3_7hvxl"]
+[ext_resource type="ArrayMesh" uid="uid://k6djfda75qi2" path="res://Assets/Models/Kaelous ship V1_mesh.res" id="4_auqky"]
 
 [node name="Node3D" type="Node3D"]
 
-[node name="Kaelous ship V1" parent="." instance=ExtResource("1_4cm4r")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -23.0977)
+[node name="KaelousShipV1Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("4_auqky")
 
-[node name="Camera3D" type="Camera3D" parent="Kaelous ship V1"]
-transform = Transform3D(-1, 8.74228e-08, 0, 3.82137e-15, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, 39.3646, -2.53505)
+[node name="KaelousShipV1Mesh2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ijv0b")
+
+[node name="KaelousShipV1Mesh3" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_jjarf")
+
+[node name="KaelousShipV1Mesh4" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_7hvxl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 2.5411e-21, 8.74228e-08, 1, 8.74228e-08, 7.64274e-15, 8.74228e-08, -1, -1.35229, 3.91742, 40.0745)
 current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000724077, 6.25912, 39.6312)
+visible = false
+light_energy = 16.0
+omni_range = 4096.0

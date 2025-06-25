@@ -3,6 +3,7 @@
 [node name="Node3D" type="Node3D"]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
 radius = 100.0
 radial_segments = 20
 rings = 20
