@@ -1,6 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://2ffqmgo73eus"]
-
-[ext_resource type="Material" uid="uid://ui4wx1gmidt5" path="res://Assets/Materials/normal Texture ship V1.tres" id="1_7f501"]
+[gd_scene format=3 uid="uid://2ffqmgo73eus"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -9,4 +7,3 @@ transform = Transform3D(6, 0, 0, 0, -2.62268e-07, 6, 0, -6, -2.62268e-07, 0, 0, 
 radius = 100.0
 radial_segments = 20
 rings = 20
-material = ExtResource("1_7f501")

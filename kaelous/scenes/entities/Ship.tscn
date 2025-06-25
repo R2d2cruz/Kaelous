@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b63w51nmovycn"]
+[gd_scene load_steps=14 format=3 uid="uid://b63w51nmovycn"]
 
 [ext_resource type="ArrayMesh" uid="uid://cl67es28x7mbt" path="res://Assets/Models/Kaelous ship V1_1_mesh.res" id="1_7hvxl"]
+[ext_resource type="Material" uid="uid://ui4wx1gmidt5" path="res://Assets/Materials/normal Texture ship V1.tres" id="1_auqky"]
 [ext_resource type="ArrayMesh" uid="uid://dyucja7o8nnq6" path="res://Assets/Models/Kaelous ship V1_1_mesh2.res" id="2_auqky"]
 [ext_resource type="ArrayMesh" uid="uid://bcdurnxa1510d" path="res://Assets/Models/Kaelous ship V1_1_mesh3.res" id="3_l3afr"]
 [ext_resource type="ArrayMesh" uid="uid://dc8h6o2l75mx5" path="res://Assets/Models/Kaelous ship V1_1_mesh4.res" id="4_lnlfb"]
@@ -28,12 +29,14 @@ data = PackedVector3Array(-10, 0, 16, -9, 0, 17, -9, 0, 16, -9, 0, 17, -10, 0, 1
 [node name="Node3D" type="CharacterBody3D"]
 
 [node name="KaelousShipV11Mesh" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_auqky")
 mesh = ExtResource("1_7hvxl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_8jmx2")
 
 [node name="KaelousShipV11Mesh2" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_auqky")
 mesh = ExtResource("2_auqky")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
@@ -52,12 +55,14 @@ mesh = ExtResource("4_lnlfb")
 shape = SubResource("ConcavePolygonShape3D_03r26")
 
 [node name="KaelousShipV11Mesh5" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_auqky")
 mesh = ExtResource("5_pp1qv")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
 shape = SubResource("ConcavePolygonShape3D_s3pj7")
 
 [node name="KaelousShipV11Mesh6" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_auqky")
 mesh = ExtResource("6_pn15u")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
