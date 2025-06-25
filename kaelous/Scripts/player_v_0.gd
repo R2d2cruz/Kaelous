@@ -6,22 +6,20 @@ const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.8
 const SENSITIVITY = 0.004
 
-#bob variables
+# Bob variables
 const BOB_FREQ = 2.4
 const BOB_AMP = 0.08
 var t_bob = 0.0
 
-#fov variables
+# FOV variables
 const BASE_FOV = 75.0
 const FOV_CHANGE = 1.5
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
 
-
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
@@ -29,43 +27,39 @@ func _unhandled_input(event):
 		camera.rotate_x(-event.relative.y * SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-40), deg_to_rad(60))
 
-
 func _physics_process(delta):
-	
-	# Handle Sprint.
-	#if Input.is_action_pressed("sprint"):
-		#speed = SPRINT_SPEED
-	#else:
-		#speed = WALK_SPEED
 	speed = WALK_SPEED
+
+	# Movimiento vertical manual
 	var directionY = Input.get_axis("low", "jump")
 	if directionY:
 		velocity.y = directionY * speed
 	else:
-		velocity.y = lerp(velocity.y, directionY * speed, delta * 7.0)
+		velocity.y = lerp(velocity.y, 0.0, delta * 7.0)
 
-	# Get the input direction and handle the movement/deceleration.
+	# Dirección de movimiento local al personaje (aunque esté dentro de Planeta)
 	var input_dir = Input.get_vector("left", "right", "up", "down")
-	var direction = (head.transform.basis * transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
-	if direction:
-		velocity.x = direction.x * speed
-		velocity.z = direction.z * speed
+	if input_dir.length() > 0:
+		# Movimiento relativo al "head" y su orientación
+		var move_dir = (head.global_transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		velocity.x = move_dir.x * speed
+		velocity.z = move_dir.z * speed
 	else:
-		velocity.x = lerp(velocity.x, direction.x * speed, delta * 7.0)
-		velocity.z = lerp(velocity.z, direction.z * speed, delta * 7.0)
-	
+		# Frenado suave
+		velocity.x = lerp(velocity.x, 0.0, delta * 7.0)
+		velocity.z = lerp(velocity.z, 0.0, delta * 7.0)
+
 	# Head bob
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
-	
+
 	# FOV
 	var velocity_clamped = clamp(velocity.length(), 0.5, SPRINT_SPEED * 2)
 	var target_fov = BASE_FOV + FOV_CHANGE * velocity_clamped
 	camera.fov = lerp(camera.fov, target_fov, delta * 8.0)
-	
-	move_and_slide()
 
+	move_and_slide()
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
