@@ -4,8 +4,10 @@
 
 [resource]
 resource_name = "Material.1"
+disable_ambient_light = true
+disable_fog = true
 albedo_texture = ExtResource("1_7ilca")
-metallic = 1.0
-metallic_specular = 1.0
+metallic = 0.7
+metallic_specular = 0.7
 roughness = 0.3
 emission = Color(0, 0, 1, 1)

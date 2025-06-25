@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c0eujowsdi2an"
-path="res://.godot/imported/Kaelous ship V1.gltf-da1090ec964f37c62135b9575fd108d0.scn"
+uid="uid://fitowval5vp1"
+path="res://.godot/imported/Kaelous ship V1.1.gltf-3b76c8aed91e3f865b79ac7147302008.scn"
 
 [deps]
 
-source_file="res://Assets/Models/Kaelous ship V1.gltf"
-dest_files=["res://.godot/imported/Kaelous ship V1.gltf-da1090ec964f37c62135b9575fd108d0.scn"]
+source_file="res://Assets/Models/Kaelous ship V1.1.gltf"
+dest_files=["res://.godot/imported/Kaelous ship V1.1.gltf-3b76c8aed91e3f865b79ac7147302008.scn"]
 
 [params]
 
@@ -17,7 +17,7 @@ nodes/root_type=""
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
-nodes/import_as_skeleton_bones=true
+nodes/import_as_skeleton_bones=false
 nodes/use_node_type_suffixes=true
 meshes/ensure_tangents=true
 meshes/generate_lods=true
@@ -34,37 +34,53 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Kaelous ship V1_mesh": {
+"Kaelous ship V1_1_mesh": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Assets/Models/Kaelous ship V1_mesh.res"
+"save_to_file/path": "res://Assets/Models/Kaelous ship V1_1_mesh.res"
 },
-"Kaelous ship V1_mesh2": {
+"Kaelous ship V1_1_mesh2": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Assets/Models/Kaelous ship V1_mesh2.res"
+"save_to_file/path": "res://Assets/Models/Kaelous ship V1_1_mesh2.res"
 },
-"Kaelous ship V1_mesh3": {
+"Kaelous ship V1_1_mesh3": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Assets/Models/Kaelous ship V1_mesh3.res"
+"save_to_file/path": "res://Assets/Models/Kaelous ship V1_1_mesh3.res"
 },
-"Kaelous ship V1_mesh4": {
+"Kaelous ship V1_1_mesh4": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 60.0,
 "save_to_file/enabled": true,
-"save_to_file/path": "res://Assets/Models/Kaelous ship V1_mesh4.res"
+"save_to_file/path": "res://Assets/Models/Kaelous ship V1_1_mesh4.res"
+},
+"Kaelous ship V1_1_mesh5": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Kaelous ship V1_1_mesh5.res"
+},
+"Kaelous ship V1_1_mesh6": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Kaelous ship V1_1_mesh6.res"
 }
 }
 }

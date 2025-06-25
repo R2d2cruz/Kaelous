@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6gjga4imwvf4"]
+
+[ext_resource type="Script" uid="uid://dsav4rcg5dxbc" path="res://Scripts/player_v_0.gd" id="1_mok5v"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pidf2"]
+radius = 1.0
+height = 6.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_mok5v"]
+radius = 1.0
+height = 6.0
+
+[node name="Node3D" type="CharacterBody3D"]
+motion_mode = 1
+script = ExtResource("1_mok5v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_pidf2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00481534, 0, -0.00865078)
+shape = SubResource("CapsuleShape3D_mok5v")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.734531, 0)
+current = true
+fov = 120.0
