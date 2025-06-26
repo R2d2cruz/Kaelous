@@ -17,7 +17,7 @@ environment = SubResource("Environment_vg4v8")
 [node name="Planeta" parent="." instance=ExtResource("1_ha6jw")]
 
 [node name="Nave" parent="Planeta" instance=ExtResource("2_ha6jw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -850, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1120.23, 0, 0)
 
 [node name="Node3D" parent="Planeta/Nave" instance=ExtResource("4_gurl2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60486, 0, 42.3586)

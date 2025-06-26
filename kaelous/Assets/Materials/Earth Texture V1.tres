@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://y25ywrbqt44y"]
+
+[ext_resource type="Texture2D" uid="uid://bu3m8yt04t6bf" path="res://Assets/Models/Earth V1_0.png" id="1_bj22d"]
+
+[resource]
+resource_name = "Material.1"
+albedo_texture = ExtResource("1_bj22d")
+metallic = 0.2
+roughness = 0.5
