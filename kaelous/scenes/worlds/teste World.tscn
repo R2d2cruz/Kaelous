@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dsd87urw5h44b"]
 
 [ext_resource type="PackedScene" uid="uid://2ffqmgo73eus" path="res://scenes/objects/World V0.tscn" id="1_ha6jw"]
-[ext_resource type="Script" uid="uid://dxmwfsiy6hmtm" path="res://scenes/worlds/worldManager.gd" id="1_vg4v8"]
+[ext_resource type="Script" uid="uid://dxmwfsiy6hmtm" path="res://Scripts/worldManager.gd" id="1_vg4v8"]
 [ext_resource type="PackedScene" uid="uid://b63w51nmovycn" path="res://scenes/entities/Ship.tscn" id="2_ha6jw"]
 [ext_resource type="PackedScene" uid="uid://c6gjga4imwvf4" path="res://scenes/entities/player V0.tscn" id="4_gurl2"]
 
