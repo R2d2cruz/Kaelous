@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6gjga4imwvf4" path="res://scenes/entities/player V0.tscn" id="4_gurl2"]
 
 [sub_resource type="Environment" id="Environment_vg4v8"]
-background_mode = 2
+background_mode = 1
 
 [node name="Mundo" type="Node3D"]
 script = ExtResource("1_vg4v8")
@@ -20,7 +20,7 @@ environment = SubResource("Environment_vg4v8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1120.23, 0, 0)
 
 [node name="Node3D" parent="Planeta/Nave" instance=ExtResource("4_gurl2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60486, 0, 42.3586)
+transform = Transform3D(0.64679, 0, -0.762668, 0, 1, 0, 0.762668, 0, 0.64679, 13.7823, 0, 17.2316)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 light_energy = 4.717

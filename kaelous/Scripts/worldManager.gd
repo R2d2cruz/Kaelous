@@ -1,6 +1,6 @@
 extends Node3D
 
-const ROTATIONSPEED = 6.28 / (5.0*60.0)
+const ROTATIONSPEED = 6.28 / (2.5*60.0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
