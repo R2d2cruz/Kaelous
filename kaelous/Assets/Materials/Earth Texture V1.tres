@@ -5,7 +5,6 @@
 [resource]
 resource_name = "Material.1"
 albedo_texture = ExtResource("1_bj22d")
-metallic = 0.4
-roughness = 0.4
+roughness = 0.6
 rim_enabled = true
 rim = 0.6

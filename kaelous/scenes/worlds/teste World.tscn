@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsd87urw5h44b"]
+[gd_scene load_steps=7 format=3 uid="uid://dsd87urw5h44b"]
 
 [ext_resource type="PackedScene" uid="uid://2ffqmgo73eus" path="res://scenes/objects/World V0.tscn" id="1_ha6jw"]
 [ext_resource type="Script" uid="uid://dxmwfsiy6hmtm" path="res://Scripts/worldManager.gd" id="1_vg4v8"]
 [ext_resource type="PackedScene" uid="uid://b63w51nmovycn" path="res://scenes/entities/Ship.tscn" id="2_ha6jw"]
 [ext_resource type="PackedScene" uid="uid://c6gjga4imwvf4" path="res://scenes/entities/player V0.tscn" id="4_gurl2"]
+[ext_resource type="PackedScene" uid="uid://bjvduu8d0xtdx" path="res://scenes/objects/Sun.tscn" id="5_jjc8i"]
 
 [sub_resource type="Environment" id="Environment_vg4v8"]
 background_mode = 1
@@ -20,7 +21,10 @@ environment = SubResource("Environment_vg4v8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1120.23, 0, 0)
 
 [node name="Node3D" parent="Planeta/Nave" instance=ExtResource("4_gurl2")]
-transform = Transform3D(0.64679, 0, -0.762668, 0, 1, 0, 0.762668, 0, 0.64679, 13.7823, 0, 17.2316)
+transform = Transform3D(0.64679, 0, -0.762668, 0, 1, 0, 0.762668, 0, 0.64679, -1.09888, 0, 17.2316)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-light_energy = 4.717
+light_color = Color(0.999999, 0.993084, 0.719158, 1)
+
+[node name="Node3D" parent="." instance=ExtResource("5_jjc8i")]
+transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 0, 3000)

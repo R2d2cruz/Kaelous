@@ -13,5 +13,5 @@ rings = 20
 material = ExtResource("1_rp06n")
 
 [node name="EarthV1Mesh" type="MeshInstance3D" parent="."]
-transform = Transform3D(-5.19615, 3, 1.31134e-07, 0, -2.62268e-07, 6, 3, 5.19615, 2.27131e-07, 0, -768, 0)
+transform = Transform3D(-5.90885, 1.04189, 4.55424e-08, 0, -2.62268e-07, 6, 1.04189, 5.90885, 2.58284e-07, 0, -768, 0)
 mesh = ExtResource("1_7f501")

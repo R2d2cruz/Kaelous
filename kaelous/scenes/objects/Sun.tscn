@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjvduu8d0xtdx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wrodk"]
+albedo_color = Color(0.831582, 0.831582, 0, 1)
+emission_enabled = true
+emission = Color(0.831373, 0.831373, 0, 1)
+emission_energy_multiplier = 6.73
+rim_enabled = true
+
+[node name="Node3D" type="Node3D"]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+radius = 100.0
+radial_segments = 20
+rings = 12
+material = SubResource("StandardMaterial3D_wrodk")

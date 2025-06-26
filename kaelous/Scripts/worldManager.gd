@@ -9,5 +9,5 @@ func _ready():
 
 
 func _process(delta: float) -> void:
-	print($Planeta.rotation_degrees)
+	#print($Planeta.rotation_degrees)
 	$Planeta.rotate_y(delta * ROTATIONSPEED)
