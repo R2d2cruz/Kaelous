@@ -70,9 +70,18 @@ shape = SubResource("ConcavePolygonShape3D_qkpa8")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000724077, -4.23234, 39.6312)
-light_energy = 10.344
+light_energy = 8.0
 omni_range = 4096.0
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1549, 5.16156, 17.5429)
-light_energy = 3.586
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.1549, 1.90378, 17.5429)
+visible = false
+light_energy = 3.0
+
+[node name="CameraWindow" type="Camera3D" parent="."]
+transform = Transform3D(-0.942932, 0, -0.332984, 0, 1, 0, 0.332984, 0, -0.942932, 15.943, 0.0371268, 13.7944)
+fov = 120.0
+
+[node name="CameraShip" type="Camera3D" parent="."]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.15958, 19.0884, 34.6844)
+fov = 120.0

@@ -20,11 +20,11 @@ environment = SubResource("Environment_vg4v8")
 [node name="Nave" parent="Planeta" instance=ExtResource("2_ha6jw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1120.23, 0, 0)
 
-[node name="Node3D" parent="Planeta/Nave" instance=ExtResource("4_gurl2")]
+[node name="Player" parent="Planeta/Nave" instance=ExtResource("4_gurl2")]
 transform = Transform3D(0.64679, 0, -0.762668, 0, 1, 0, 0.762668, 0, 0.64679, -1.09888, 0, 17.2316)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 light_color = Color(0.999999, 0.993084, 0.719158, 1)
 
-[node name="Node3D" parent="." instance=ExtResource("5_jjc8i")]
+[node name="Sun" parent="." instance=ExtResource("5_jjc8i")]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, 0, 0, 3000)
