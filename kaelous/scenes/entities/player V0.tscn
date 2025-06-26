@@ -10,7 +10,7 @@ height = 6.0
 radius = 1.0
 height = 6.0
 
-[node name="Node3D" type="CharacterBody3D"]
+[node name="Node3D" type="CharacterBody3D" groups=["Players"]]
 motion_mode = 1
 script = ExtResource("1_mok5v")
 
