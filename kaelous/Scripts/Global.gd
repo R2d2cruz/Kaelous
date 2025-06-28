@@ -2,7 +2,16 @@ extends Node
 
 var camera = 0  # =: Jugador, 1: Nave, 2: ventana, 3: robot
 signal camera_state
+signal go_around
 var player_in_module = 0
+
+var min_r_limit := 50.0
+var max_r_limit := 1500.0
+
+func ship_out_of_limits(current_r):
+	print("Game Over: nave fuera del límite. r =", current_r)
+	# Aquí puedes pausar el juego, mostrar UI, cambiar de escena, etc.
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,6 +32,8 @@ func _input(event: InputEvent) -> void:
 			else:
 				camera = 0 
 		emit_signal("camera_state")
+	if event.is_action_pressed("r"):
+		emit_signal("go_around")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
