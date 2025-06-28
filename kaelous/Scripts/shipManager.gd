@@ -78,7 +78,7 @@ func _process(delta: float) -> void:
 		# Visual tilt
 		rotation_degrees.x = move_toward(rotation_degrees.x, -target.x * ANGLEROTATION, ANGLESPEED * delta)
 		rotation_degrees.y = move_toward(rotation_degrees.y, target.y * ANGLEROTATION, ANGLESPEED * delta)
-		if abs(delta_x) < 0.1 and abs(delta_y) < 0.1:
+		if abs(delta_x) < 0.01 and abs(delta_y) < 0.01:
 			returning_to_orbit = false
 			_active_ship()
 	
