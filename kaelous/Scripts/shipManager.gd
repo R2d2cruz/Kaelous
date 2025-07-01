@@ -28,7 +28,7 @@ func _radius() -> float:
 	return round(sqrt((position.x**2) + (position.y**2) + (position.z**2)))
 	
 func _angle() -> float:
-	return round(atan2(position.y, -position.x))
+	return round(atan2(position.y, -position.x) * 100) / 100
 
 func _active_ship():
 	in_conduction = Global.camera == 1
@@ -55,7 +55,7 @@ func _process(delta: float) -> void:
 		var target = input_dir * maxSpeed
 		velocityAux.x = move_toward(velocityAux.x, target.x, deltaSpeed * delta)
 		velocityAux.y = move_toward(velocityAux.y, target.y, deltaSpeed * delta)
-		print(input_dir, target)
+		print(_radius(), _angle())
 		# Visual tilt
 		rotation_degrees.x = move_toward(rotation_degrees.x, input_dir.x * ANGLEROTATION, ANGLESPEED * delta)
 		rotation_degrees.y = move_toward(rotation_degrees.y, input_dir.y * ANGLEROTATION, ANGLESPEED * delta)
@@ -83,3 +83,6 @@ func _process(delta: float) -> void:
 			_active_ship()
 	
 	position += velocityAux * delta
+
+	if abs(_radius() - initial_r) > Global.r_margin or abs(initial_theta - _angle()) > Global.theta_margin:
+		Global.ship_out_of_limits(_radius(), _angle())

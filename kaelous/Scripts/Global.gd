@@ -5,11 +5,11 @@ signal camera_state
 signal go_around
 var player_in_module = 0
 
-var min_r_limit := 50.0
-var max_r_limit := 1500.0
+var r_margin = 40
+var theta_margin = 10 * 3.14 / 180
 
-func ship_out_of_limits(current_r):
-	print("Game Over: nave fuera del límite. r =", current_r)
+func ship_out_of_limits(current_r, current_theta):
+	print("Game Over: nave fuera del límite. r =", current_r, ", theta =", current_theta)
 	# Aquí puedes pausar el juego, mostrar UI, cambiar de escena, etc.
 
 
