@@ -77,15 +77,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.48268, 47.572)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00201416, 1.07051, 0.403587)
 shape = SubResource("BoxShape3D_lnlfb")
 
-[node name="oxigenPanel" type="Area3D" parent="."]
+[node name="OxigenPanel" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 11, 23)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="oxigenPanel"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="OxigenPanel"]
+shape = SubResource("BoxShape3D_lnlfb")
+
+[node name="LivingRoom" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 18)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="LivingRoom"]
 shape = SubResource("BoxShape3D_lnlfb")
 
 [node name="Door" parent="." instance=ExtResource("7_auqky")]
 
 [connection signal="body_entered" from="Wheel" to="." method="_on_wheel_body_entered"]
 [connection signal="body_exited" from="Wheel" to="." method="_on_wheel_body_exited"]
-[connection signal="body_entered" from="oxigenPanel" to="." method="_on_wheel_body_entered"]
-[connection signal="body_exited" from="oxigenPanel" to="." method="_on_wheel_body_exited"]
+[connection signal="body_entered" from="OxigenPanel" to="." method="_on_oxigen_panel_body_entered"]
+[connection signal="body_exited" from="OxigenPanel" to="." method="_on_oxigen_panel_body_exited"]
+[connection signal="body_entered" from="LivingRoom" to="." method="_on_living_room_body_entered"]
+[connection signal="body_exited" from="LivingRoom" to="." method="_on_living_room_body_exited"]

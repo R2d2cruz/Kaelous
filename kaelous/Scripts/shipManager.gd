@@ -37,14 +37,6 @@ func _go_around():
 	in_conduction = false
 	returning_to_orbit = true
 
-func _on_wheel_body_entered(body: Node3D):
-	if body.is_in_group("Players"):
-		Global.body_in_ship(body, 1)
-
-func _on_wheel_body_exited(body: Node3D):
-	if body.is_in_group("Players"):
-		Global.body_out_ship(body)
-
 func _process(delta: float) -> void:
 	if not orbit_initialized:
 		return
@@ -86,3 +78,28 @@ func _process(delta: float) -> void:
 
 	if abs(_radius() - initial_r) > Global.r_margin or abs(initial_theta - _angle()) > Global.theta_margin:
 		Global.ship_out_of_limits(_radius(), _angle())
+
+func _on_wheel_body_entered(body: Node3D):
+	if body.is_in_group("Players"):
+		Global.body_in_ship(body, 1)
+
+func _on_wheel_body_exited(body: Node3D):
+	if body.is_in_group("Players"):
+		Global.body_out_ship(body)
+
+func _on_living_room_body_entered(body: Node3D) -> void:
+	if body.is_in_group("Players"):
+		Global.body_in_ship(body, 2)
+
+
+func _on_living_room_body_exited(body: Node3D) -> void:
+	if body.is_in_group("Players"):
+		Global.body_out_ship(body)
+
+
+func _on_oxigen_panel_body_entered(body: Node3D) -> void:
+	pass # Replace with function body.
+
+
+func _on_oxigen_panel_body_exited(body: Node3D) -> void:
+	pass # Replace with function body.
