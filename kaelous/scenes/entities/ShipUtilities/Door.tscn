@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=3 uid="uid://buo5yrqxns87e"]
+
+[ext_resource type="Script" uid="uid://bb7l1npc2ewvo" path="res://Scripts/doorManager.gd" id="1_f5yv3"]
+[ext_resource type="Material" uid="uid://ui4wx1gmidt5" path="res://Assets/Materials/normal Texture ship V1.tres" id="1_pynmo"]
+[ext_resource type="ArrayMesh" uid="uid://imcayryim6sk" path="res://Assets/Models/Kaelous ship V1_1_mesh5.res" id="2_f5yv3"]
+[ext_resource type="ArrayMesh" uid="uid://c6mo0y7bsr4lj" path="res://Assets/Models/Kaelous ship V1_1_mesh6.res" id="3_5tgre"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_f5yv3"]
+points = PackedVector3Array(-10, -5, 15.9992, -10, -4.0001, 13.9994, -9, -5, 15.9992, -10, -5, 19.9998, -10, -2.00029, 13, -9, -4.0001, 13.9994, -9, -5, 19.9998, -10, -4.0001, 21.9996, -9, -2.00029, 13, -10, 0, 13, -9, -4.0001, 21.9996, -10, -2.00029, 23, -9, 0, 13, -10, 0, 23, -9, -2.00029, 23, -9, 0, 23)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5tgre"]
+points = PackedVector3Array(-10, 0, 13, -10, 1.9998, 13, -9, 0, 13, -10, 0, 23, -9, 1.9998, 13, -10, 3.99961, 13.9994, -9, 0, 23, -10, 0.999902, 23, -9, 3.99961, 13.9994, -10, 5, 15.9992, -9, 0.999902, 23, -10, 2.99971, 21.9996, -9, 5, 15.9992, -10, 5, 19.9998, -9, 2.99971, 21.9996, -9, 5, 19.9998)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ioep6"]
+size = Vector3(3, 10, 10)
+
+[node name="Node3D" type="CharacterBody3D"]
+script = ExtResource("1_f5yv3")
+
+[node name="DoorMeshDown" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pynmo")
+mesh = ExtResource("2_f5yv3")
+
+[node name="DoorCollisionDown" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_f5yv3")
+
+[node name="DoorMeshUp" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_pynmo")
+mesh = ExtResource("3_5tgre")
+
+[node name="DoorCollisionUp" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_5tgre")
+
+[node name="DoorOpener" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 0, 18)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DoorOpener"]
+shape = SubResource("BoxShape3D_ioep6")
+
+[connection signal="body_entered" from="DoorOpener" to="." method="_on_door_opener_body_entered"]
+[connection signal="body_exited" from="DoorOpener" to="." method="_on_door_opener_body_exited"]
