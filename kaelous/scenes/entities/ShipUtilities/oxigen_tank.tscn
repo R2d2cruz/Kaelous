@@ -1,0 +1,75 @@
+[gd_scene load_steps=3 format=3 uid="uid://cca2xh7075ugh"]
+
+[ext_resource type="ArrayMesh" uid="uid://cbhy6pf4m2u43" path="res://Assets/Models/tank v1_mesh.res" id="1_ar6pd"]
+[ext_resource type="Script" uid="uid://cgkl7unlmv4r" path="res://Scripts/oxigen_tank.gd" id="1_jdpr1"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_jdpr1")
+
+[node name="Tank0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Section0" type="MeshInstance3D" parent="Tank0"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section1" type="MeshInstance3D" parent="Tank0"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 1, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section2" type="MeshInstance3D" parent="Tank0"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 2, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section3" type="MeshInstance3D" parent="Tank0"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 3, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Tank1" type="Node3D" parent="."]
+
+[node name="Section0" type="MeshInstance3D" parent="Tank1"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section1" type="MeshInstance3D" parent="Tank1"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 1, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section2" type="MeshInstance3D" parent="Tank1"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 2, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section3" type="MeshInstance3D" parent="Tank1"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 3, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Tank2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="Section0" type="MeshInstance3D" parent="Tank2"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 0, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section1" type="MeshInstance3D" parent="Tank2"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 1, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section2" type="MeshInstance3D" parent="Tank2"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 2, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")
+
+[node name="Section3" type="MeshInstance3D" parent="Tank2"]
+transform = Transform3D(0.25, 0, 0, 0, -1.09278e-08, 0.25, 0, -0.25, -1.09278e-08, 0, 3, 0)
+mesh = ExtResource("1_ar6pd")
+skeleton = NodePath("../..")

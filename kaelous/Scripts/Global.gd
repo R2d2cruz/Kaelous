@@ -7,6 +7,7 @@ var player_in_module = 0
 
 var r_margin = 40
 var theta_margin = 10 * 3.14 / 180
+var oxigen = 90
 
 func ship_out_of_limits(current_r, current_theta):
 	print("Game Over: nave fuera del límite. r =", current_r, ", theta =", current_theta)
@@ -41,4 +42,4 @@ func _input(event: InputEvent) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	oxigen -= 0.35 * delta
